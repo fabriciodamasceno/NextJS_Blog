@@ -1,4 +1,6 @@
+import { Header } from '@/components/Header';
 import Head from "next/head";
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -9,8 +11,31 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>Desenvolvedor Web</h1>
       
+      <div className='w-full max-w-[1120px] flex flex-col mx-auto pb-12 '>
+        <Header />
+
+      <div className='w-full h-full flex gap-8 items-center justify-center mt-12'> 
+        <div className='flex flex-1 h-[334px] relative rounded-2xl overflow-hidden'>
+          <Image
+          src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="foto"
+          fill={true}
+          style={{ objectFit: "cover" }}
+          />
+        </div>
+        <div className='flex flex-1 h-[334px] flex-col gap-6'>
+          <h1 className='font-bold text-[40px] text-blue-600'>Racher Desktop. Um alternativa ao Docker</h1>
+          <p className='text-zinc-600'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed elit et eros vulputate tempus. Fusce id dapibus nibh. Curabitur efficitur risus sit amet elit tristique, hendrerit molestie augue auctor. Nullam viverra urna ultricies, viverra tortor in, maximus orci.</p>
+          <div>
+          <p className='font-bold text-zinc-900'>Fabrício M. Damasceno</p>
+          <p className='text-zinc-600 text-sm'>02/02/2024</p>
+          </div>
+        </div>
+        </div>
+
+
+      </div>      
     </>
   );
 }
